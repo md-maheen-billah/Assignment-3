@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hockey's</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .manrope {
+        font-family: "Manrope", sans-serif;
+      }
+      .progress-ring__circle {
+        stroke-dasharray: 400, 400;
+        transition: stroke-dashoffset 0.35s;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "orange-col": "#FF4240",
+              "black-col": "#131318",
+              "gray-col": "#717174",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="manrope max-w-[1440px] mx-auto">
+    <header class="">
+      <nav
+        class="container max-w-[1170px] mx-auto my-[1rem] pr-4 md:pr-4 lg:px-4 lg:mt-[2rem] lg:mb-[3.125rem]"
+      >
+        <div class="navbar p-0">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Pages</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <a
+              class="btn btn-ghost text-[1.5rem] lg:text-[2.25rem] font-extrabold p-0"
+              ><span>Hockey<span class="text-orange-col">’</span>s</span></a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex text-[1rem]">
+            <ul class="menu menu-horizontal px-1">
+              <li><a class="text-orange-col font-bold lg:text-base">Home</a></li>
+              <li><a class="lg:text-base">About</a></li>
+              <li><a class="lg:text-base">Pages</a></li>
+              <li><a class="lg:text-base">Blog</a></li>
+              <li><a class="lg:text-base">Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end gap-[1rem]">
+            <div class="hidden lg:flex">
+              <img class="w-10/12" src="Images/search.svg" />
+            </div>
+            <a
+              class="btn bg-orange-col text-white text-[1.125rem] lg:text-[1.25rem] font-bold"
+              >Get Ticket</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- Banner Section -->
+      <section class="container max-w-[1170px] mx-auto px-4 relative">
+        <div class="carousel w-full rounded-xl">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full hidden lg:flex" />
+            <img src="Images/cara.jpg" class="w-full lg:hidden" />
+            <div
+              class="absolute flex justify-center lg:block space-x-2 bottom-0 lg:left-10 transform left-5 right-5 -translate-y-1/2"
+            >
+              <a
+                href="#slide4"
+                class="btn btn-circle text-white bg-black-col text-4xl font-extralight border-black-col"
+                >&lt</a
+              >
+              <a
+                href="#slide2"
+                class="btn btn-circle text-white bg-black-col text-4xl font-extralight border-black-col"
+                >&gt</a
+              >
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full hidden lg:flex" />
+            <img src="Images/cara.jpg" class="w-full lg:hidden" />
+            <div
+              class="absolute flex justify-center lg:block space-x-2 bottom-0 lg:left-10 transform left-5 right-5 -translate-y-1/2"
+            >
+              <a
+                href="#slide1"
+                class="btn btn-circle text-white bg-black-col text-4xl font-extralight border-black-col"
+                >&lt</a
+              >
+              <a
+                href="#slide3"
+                class="btn btn-circle text-white bg-black-col text-4xl font-extralight border-black-col"
+                >&gt</a
+              >
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full hidden lg:flex" />
+            <img src="Images/cara.jpg" class="w-full lg:hidden" />
+            <div
+              class="absolute flex justify-center lg:block space-x-2 bottom-0 lg:left-10 transform left-5 right-5 -translate-y-1/2"
+            >
+              <a
+                href="#slide2"
+                class="btn btn-circle text-white bg-black-col text-4xl font-extralight border-black-col"
+                >&lt</a
+              >
+              <a
+                href="#slide4"
+                class="btn btn-circle text-white bg-black-col text-4xl font-extralight border-black-col"
+                >&gt</a
+              >
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full hidden lg:flex" />
+            <img src="Images/cara.jpg" class="w-full lg:hidden" />
+            <div
+              class="absolute flex justify-center lg:block space-x-2 bottom-0 lg:left-10 transform left-5 right-5 -translate-y-1/2"
+            >
+              <a
+                href="#slide3"
+                class="btn btn-circle text-white bg-black-col text-4xl font-extralight border-black-col"
+                >&lt</a
+              >
+              <a
+                href="#slide1"
+                class="btn btn-circle text-white bg-black-col text-4xl font-extralight border-black-col"
+                >&gt</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="lg:absolute right-0">
+          <div class="flex lg:justify-end lg:mr-8">
+            <div
+              class="bg-black-col w-[35.375rem] p-4 lg:p-8 rounded-xl space-y-2 lg:space-y-4 lg:-translate-y-52 mt-4 lg:mt-0"
+            >
+              <h2
+                class="text-[1.125rem] lg:text-[1.5rem] text-white font-extrabold"
+              >
+                Meet all the heroes from the field
+              </h2>
+              <p class="text-[#a1a1a3] text-[0.875rem] lg:text-[1rem]">
+                Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+                turpis placerat dolor. Purus urna in sit nullam proin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- Professional Hockeys Club Section -->
+      <section
+        class="container max-w-[1170px] mx-auto px-4 pt-10 lg:pt-24 lg:pb-12 space-y-6"
+      >
+        <div
+          class="text-center space-y-4 lg:space-y-6 border border-dashed border-y-2 border-x-0 p-5 lg:p-[2rem]"
+        >
+          <h2 class="text-[1.375rem] lg:text-4xl text-black-col font-extrabold">
+            Professional Hockeys Club
+          </h2>
+          <p
+            class="text-[0.875rem] lg:text-base font-medium text-gray-col leading-6"
+          >
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat <br />
+            dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+        <div
+          class="flex flex-col space-y-6 lg:space-y-0 lg:flex-row lg:justify-around lg:pt-6"
+        >
+          <div class="space-y-6 flex-col text-center">
+            <div class="relative w-40 h-40 mx-auto">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <!-- Background circle -->
+                <circle
+                  class="text-gray-200 stroke-current"
+                  stroke-width="10"
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                ></circle>
+                <!-- Progress circle -->
+                <circle
+                  class="text-[#FF4240] progress-ring__circle stroke-current transform rotate-180 scale-x-[-1]"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                  stroke-dashoffset="calc(400 - (400 * 51) / 100)"
+                ></circle>
+
+                <!-- Center text -->
+                <text
+                  class="text-[1.25rem] font-extrabold"
+                  x="50"
+                  y="50"
+                  text-anchor="middle"
+                  alignment-baseline="middle"
+                >
+                  87%
+                </text>
+              </svg>
+            </div>
+            <div class="space-y-4">
+              <h2 class="text-xl font-semibold text-black-col">
+                Prayer Facility
+              </h2>
+              <p class="text-base font-normal text-gray-col">
+                Amet consectetur. Condimentum <br />
+                dignissim adipiscing .
+              </p>
+            </div>
+          </div>
+          <div class="space-y-6 flex-col text-center">
+            <div class="relative w-40 h-40 mx-auto">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <!-- Background circle -->
+                <circle
+                  class="text-gray-200 stroke-current"
+                  stroke-width="10"
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                ></circle>
+                <!-- Progress circle -->
+                <circle
+                  class="text-[#49D293] progress-ring__circle stroke-current transform rotate-180 scale-x-[-1]"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                  stroke-dashoffset="calc(400 - (400 * 56) / 100)"
+                ></circle>
+
+                <!-- Center text -->
+                <text
+                  class="text-[1.25rem] font-extrabold"
+                  x="50"
+                  y="50"
+                  text-anchor="middle"
+                  alignment-baseline="middle"
+                >
+                  95%
+                </text>
+              </svg>
+            </div>
+            <div class="space-y-4">
+              <h2 class="text-xl font-semibold text-black-col">
+                Prayer Facility
+              </h2>
+              <p class="text-base font-normal text-gray-col">
+                Amet consectetur. Condimentum <br />
+                dignissim adipiscing .
+              </p>
+            </div>
+          </div>
+          <div class="space-y-6 flex-col text-center">
+            <div class="relative w-40 h-40 mx-auto">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <!-- Background circle -->
+                <circle
+                  class="text-gray-200 stroke-current"
+                  stroke-width="10"
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                ></circle>
+                <!-- Progress circle -->
+                <circle
+                  class="text-[#FFB546] progress-ring__circle stroke-current transform rotate-180 scale-x-[-1]"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                  stroke-dashoffset="calc(400 - (400 * 53) / 100)"
+                ></circle>
+
+                <!-- Center text -->
+                <text
+                  class="text-[1.25rem] font-extrabold"
+                  x="50"
+                  y="50"
+                  text-anchor="middle"
+                  alignment-baseline="middle"
+                >
+                  90%
+                </text>
+              </svg>
+            </div>
+            <div class="space-y-4">
+              <h2 class="text-xl font-semibold text-black-col">
+                Prayer Facility
+              </h2>
+              <p class="text-base font-normal text-gray-col">
+                Amet consectetur. Condimentum <br />
+                dignissim adipiscing .
+              </p>
+            </div>
+          </div>
+          <div class="space-y-6 flex-col text-center">
+            <div class="relative w-40 h-40 mx-auto">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <!-- Background circle -->
+                <circle
+                  class="text-gray-200 stroke-current"
+                  stroke-width="10"
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                ></circle>
+                <!-- Progress circle -->
+                <circle
+                  class="text-[#4C8DF1] progress-ring__circle stroke-current transform rotate-180 scale-x-[-1]"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                  stroke-dashoffset="calc(400 - (400 * 51) / 100)"
+                ></circle>
+
+                <!-- Center text -->
+                <text
+                  class="text-[1.25rem] font-extrabold"
+                  x="50"
+                  y="50"
+                  text-anchor="middle"
+                  alignment-baseline="middle"
+                >
+                  80%
+                </text>
+              </svg>
+            </div>
+            <div class="space-y-4">
+              <h2 class="text-xl font-semibold text-black-col">
+                Prayer Facility
+              </h2>
+              <p class="text-base font-normal text-gray-col">
+                Amet consectetur. Condimentum <br />
+                dignissim adipiscing .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Program Sections Section -->
+      <section
+        class="container max-w-[1170px] mx-auto px-4 p-10 lg:py-12 space-y-6"
+      >
+        <div
+          class="text-center space-y-4 lg:space-y-6 border border-dashed border-y-2 border-x-0 p-5 lg:p-[2rem]"
+        >
+          <h2 class="text-[1.375rem] lg:text-4xl text-black-col font-extrabold">
+            Program Sections
+          </h2>
+          <p
+            class="text-[0.875rem] lg:text-base font-medium text-gray-col leading-6"
+          >
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat <br />
+            dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+        <div class="grid gap-6 grid-cols-2 pt-6 font-extrabold">
+          <div
+            class="bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./Images/2.png)] rounded-2xl p-10 lg:h-[21.125rem] flex flex-col justify-end space-y-6"
+          >
+            <div class="space-y-4">
+              <h2 class="text-[1.75rem] text-white">Junior Program</h2>
+              <p class="text-base text-white font-medium leading-6">
+                Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+                elit enim sagittis turpis in magna. Id et sed euismod natoque
+                amet nunc morbi nulla. Tortor congue sed et in.
+              </p>
+            </div>
+            <div>
+              <button
+                class="btn bg-orange-col text-white text-[1.125rem] lg:text-[1.25rem] font-bold border-orange-col"
+              >
+                Register Now!
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./Images/3.png)] rounded-2xl p-10 lg:h-[21.125rem] flex flex-col justify-end space-y-6""
+          >
+          <div class="space-y-4">
+            <h2 class="text-[1.75rem] text-white">Teenager Program</h2>
+            <p class="text-base text-white font-medium leading-6">
+              Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+              elit enim sagittis turpis in magna. Id et sed euismod natoque
+              amet nunc morbi nulla. Tortor congue sed et in.
+            </p>
+          </div>
+            <div>
+              <button
+                class="btn bg-orange-col text-white text-[1.125rem] lg:text-[1.25rem] font-bold border-orange-col"
+              >
+                Register Now!
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./Images/4.png)] col-span-2 rounded-2xl p-10 lg:h-[28.125rem] flex flex-col justify-end space-y-6""
+          >
+            <h2>Professional Program</h2>
+            <p class="w-5/12">
+              Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+              enim sagittis turpis in magna. Id et sed euismod natoque amet nunc
+              morbi nulla. Tortor congue sed et in.
+            </p>
+            <div>
+              <button
+                class="btn bg-orange-col text-white text-[1.125rem] lg:text-[1.25rem] font-bold border-orange-col"
+              >
+                Register Now!
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
